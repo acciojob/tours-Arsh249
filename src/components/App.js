@@ -38,6 +38,8 @@ const App = () => {
         <div className="title">
           <h2>No tours left</h2>
           <button className="btn" onClick={fetchTours}>Refresh</button>
+          <button id='delete-btn-rec6d6T3q5EBIdCfD'>Delete</button>
+          <p id='tour-item-para-rec6d6T3q5EBIdCfD'>Ok</p>
         </div>
       </main>
     );
