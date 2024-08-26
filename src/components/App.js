@@ -48,7 +48,7 @@ const App = () => {
           <button id='delete-btn-rec6d6T3q5EBIdCfD'>Delete</button>
           <p id='tour-item-para-rec6d6T3q5EBIdCfD'>Ok</p>
           <button id='see-more-rec6d6T3q5EBIdCfD' onClick={handleToggle}>
-          {isExpanded ? 'Show less' : 'Show more'}
+          {isExpanded ? 'Show less' : 'See more'}
           </button>
         </div>
       </main>
