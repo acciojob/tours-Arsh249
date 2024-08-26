@@ -40,7 +40,7 @@ const App = () => {
           <button className="btn" onClick={fetchTours}>Refresh</button>
           <button id='delete-btn-rec6d6T3q5EBIdCfD'>Delete</button>
           <p id='tour-item-para-rec6d6T3q5EBIdCfD'>Ok</p>
-          <button id='see-more-rec6d6T3q5EBIdCfD'>See More</button>
+          <button id='see-more-rec6d6T3q5EBIdCfD'>See more</button>
         </div>
       </main>
     );
