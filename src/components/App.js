@@ -5,6 +5,7 @@ import Tours from './Tours';
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [tours, setTours] = useState([]);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const fetchTours = async () => {
     setLoading(true);
@@ -24,6 +25,12 @@ const App = () => {
     setTours(newTours);
   };
 
+  
+
+  const handleToggle = () => {
+    setIsExpanded(prevState => !prevState);
+  };
+
   useEffect(() => {
     fetchTours();
   }, []);
@@ -40,7 +47,9 @@ const App = () => {
           <button className="btn" onClick={fetchTours}>Refresh</button>
           <button id='delete-btn-rec6d6T3q5EBIdCfD'>Delete</button>
           <p id='tour-item-para-rec6d6T3q5EBIdCfD'>Ok</p>
-          <button id='see-more-rec6d6T3q5EBIdCfD'>See more</button>
+          <button id='see-more-rec6d6T3q5EBIdCfD' onClick={handleToggle}>
+          {isExpanded ? 'See less' : 'See more'}
+          </button>
         </div>
       </main>
     );
