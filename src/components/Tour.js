@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 
 const Tour = ({ id, name, info, image, price, removeTour }) => {
-  const [readMore, setReadMore] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
   return (
-    <article className="single-tour">
+    <article>
       <img src={image} alt={name} />
       <footer>
-        <div className="tour-info">
+        <div>
           <h4>{name}</h4>
           <h4 className="tour-price">${price}</h4>
         </div>
-        <p>
-          {readMore ? info : `${info.substring(0, 200)}...`}
-          <button onClick={() => setReadMore(!readMore)}>
-            {readMore ? 'Show less' : 'Read more'}
+        <p id={`tour-item-para-${id}`}>
+          {showMore ? info : `${info.substring(0, 200)}...`}
+          <button onClick={() => setShowMore(!showMore)}>
+            {showMore ? 'Show less' : 'Show more'}
           </button>
         </p>
-        <button className="delete-btn" onClick={() => removeTour(id)}>
-          Not Interested
+        <button id={`delete-btn-${id}`} onClick={() => removeTour(id)}>
+          Remove
         </button>
       </footer>
     </article>
